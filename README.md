@@ -45,3 +45,41 @@ Para virar feed de verdade (atualiza sozinho), as opções são:
 - Horários estão gravados em `data-hours` em cada card de loja; mudou o funcionamento, edite ali
 - O status não conhece feriado nem fechamento extraordinário — só o horário fixo
 - "260 mil Sampeiros" é o número de seguidores em 03/10/2026 — revisar de tempos em tempos
+
+## Próximo passo: seção dos donos (pendente)
+
+A pesquisa já foi feita, falta construir.
+
+**Quem são**
+- Giulio Mirante — [@giuliomirante](https://www.instagram.com/giuliomirante/), 64,3 mil seguidores.
+  Bio: "@sampaburgeroficial (13 unidades) · Eleita Top 3 Melhor de São Paulo ·
+  Sampa, Rio, Minas e aonde você quiser abrir"
+- Gian Mirante — [@gianmirante](https://www.instagram.com/gianmirante/), 13,3 mil seguidores.
+  Bio: "@sampaburgeroficial · @santowich.burger · @gruposuburbanos · 17 lojas SP/RJ"
+
+**Fotos**
+- `assets/img/giulio.jpg` (740×740) já está no projeto — é a foto da antiga seção
+  "Especialistas em: Qualidade" do site atual. Não está sendo usada em lugar nenhum ainda.
+- Falta uma foto do Gian. As fotos de perfil do Instagram saem em 150×150 e o CDN
+  bloqueia download fora do navegador. O caminho é pedir as fotos à operação.
+
+**Contexto do Grupo Suburbanos** (gruposuburbanos.com.br)
+- Nasceu em 2022, da aquisição das marcas Santowich e Rutz
+- Marcas: Suburbanos Pizza, Sampa Burger, Santowich — mais de 50 unidades em RJ, SP, MG, DF, ES, SC, PR
+- Franquia Sampa: investimento mínimo R$ 250 mil, faturamento médio mensal R$ 230 mil,
+  margem líquida de 12% a 15%. Por modelo/ano: dark kitchen R$ 1,6 mi · delivery e retirada
+  R$ 1,75 mi · salão com delivery R$ 2 mi · mega loja R$ 3,9 mi
+
+## ATENÇÃO: quantas unidades a Sampa tem?
+
+Três fontes, três números — o site usa 11 e pode estar desatualizado.
+
+| Fonte | Número |
+|---|---|
+| Site atual (lojas nomeadas: 6 SP + 5 RJ) | 11 |
+| Bio do @giuliomirante, sobre a Sampa | 13 unidades |
+| Bio do @gianmirante | 17 lojas SP/RJ (provavelmente somando a Santowich) |
+
+A seção de franquia do site diz "11 unidades em operação" e a de lojas lista 11 por nome.
+Se o número certo for 13, faltam dados de 2 unidades (endereço, horário, WhatsApp).
+Confirmar com a operação antes de mudar.
