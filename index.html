@@ -294,6 +294,16 @@ button,input{font:inherit;color:inherit}
 .craft h3{margin:0 0 10px;font:800 20px/1.1 var(--sans);font-variation-settings:'wdth' 103,'wght' 800;text-transform:uppercase;letter-spacing:-.022em}
 .craft p{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-soft)}
 
+/* ---------- instagram ---------- */
+.ig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:720px){.ig-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
+.ig-tile{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r);background:#120B0C}
+.ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.ig-tile::after{content:"";position:absolute;inset:0;background:rgba(18,11,12,0);transition:background .3s}
+.ig-tile:hover img{transform:scale(1.06)}
+.ig-tile:hover::after{background:rgba(18,11,12,.28)}
+.ig-tile .play{position:absolute;top:9px;right:9px;z-index:2;width:20px;height:20px;color:#fff;filter:drop-shadow(0 1px 4px rgba(0,0,0,.55))}
+
 /* ---------- lojas ---------- */
 .stores{display:grid;gap:16px}
 @media(min-width:740px){.stores{grid-template-columns:repeat(2,1fr)}}
@@ -412,6 +422,7 @@ button,input{font:inherit;color:inherit}
   <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9s.68.82.9 1.38c.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38s-.82.68-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9s-.68-.82-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38s.82-.68 1.38-.9c.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38S.93 3.35.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12s1.33 1.08 2.12 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38s1.08-1.33 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12S20.65.93 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8m7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0"/></symbol>
   <symbol id="bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="moto" viewBox="0 0 24 24"><path d="M5 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6m14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6M8 15h8l-2.5-6H10m4-3h3l1.5 3M7 9h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></symbol>
   <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
 </svg>
 
@@ -445,9 +456,10 @@ button,input{font:inherit;color:inherit}
     <ul>
       <li><a href="#cardapio">Cardápio <span>01</span></a></li>
       <li><a href="#cozinha">A cozinha <span>02</span></a></li>
-      <li><a href="#lojas">Lojas <span>03</span></a></li>
-      <li><a href="#clube">Clube Sampeiro <span>04</span></a></li>
-      <li><a href="#franquia">Franquia <span>05</span></a></li>
+      <li><a href="#instagram">Instagram <span>03</span></a></li>
+      <li><a href="#lojas">Lojas <span>04</span></a></li>
+      <li><a href="#clube">Clube Sampeiro <span>05</span></a></li>
+      <li><a href="#franquia">Franquia <span>06</span></a></li>
     </ul>
     <div class="drawer-foot">
       <a class="btn btn-white btn-lg" href="https://ifoodbr.onelink.me/F4X4/SampaBurger" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#moto"/></svg> Delivery no iFood</a>
@@ -660,6 +672,58 @@ button,input{font:inherit;color:inherit}
         <h3>Padrão de salão</h3>
         <p>Mesma montagem, mesma apresentação e mesmo tempo de saída em Carapicuíba ou na Verbo Divino. É o que permite crescer sem perder o que trouxe a gente até aqui.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== INSTAGRAM =================== -->
+<section class="sec" id="instagram" aria-labelledby="ig-h" style="background:var(--red);color:#fff">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="eyebrow" style="color:var(--onred)">@sampaburgeroficial</p>
+        <h2 class="h2" id="ig-h">260 mil Sampeiros<br>já seguem a gente</h2>
+      </div>
+      <p class="body" style="color:var(--onred)">É no Instagram que sai o burger do mês, o bastidor da chapa e a promoção antes de todo mundo. Toque numa publicação pra assistir.</p>
+    </div>
+
+    <div class="ig-grid rv">
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/Dc4TWdphApl/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Burger alto com várias carnes e cheddar sendo montado na chapa">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/10-Dc4TWdphApl.jpg" alt="Burger alto com várias carnes e cheddar sendo montado na chapa" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/Dd2QtvYpCZv/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Burger duplo segurado em frente a porções de fritas e nuggets">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/02-Dd2QtvYpCZv.jpg" alt="Burger duplo segurado em frente a porções de fritas e nuggets" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DduYAu0hfEQ/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Sobremesa Pecado Triplo sendo coberta com creme de avelã na mesa">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/03-DduYAu0hfEQ.jpg" alt="Sobremesa Pecado Triplo sendo coberta com creme de avelã na mesa" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DeAZlNrtast/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Milkshake de liquidificador sendo servido na mesa do salão">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/01-DeAZlNrtast.jpg" alt="Milkshake de liquidificador sendo servido na mesa do salão" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DdkE2DChFas/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Burger da Sampa aberto dentro do carro, com porção de fritas">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/04-DdkE2DChFas.jpg" alt="Burger da Sampa aberto dentro do carro, com porção de fritas" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DdFL92zha4c/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Sobremesa servida com calda de avelã na frente dos clientes">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/09-DdFL92zha4c.jpg" alt="Sobremesa servida com calda de avelã na frente dos clientes" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DdKZUAkhQW3/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Cliente abrindo o burger embalado dentro do carro">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/08-DdKZUAkhQW3.jpg" alt="Cliente abrindo o burger embalado dentro do carro" loading="lazy" width="360" height="640">
+      </a>
+      <a class="ig-tile" href="https://www.instagram.com/sampaburgeroficial/reel/DdcbpgVBlk9/" target="_blank" rel="noopener" aria-label="Ver publicação no Instagram: Preparo do milkshake de liquidificador com calda no salão">
+        <svg class="play" aria-hidden="true"><use href="#play"/></svg>
+        <img src="assets/img/ig/05-DdcbpgVBlk9.jpg" alt="Preparo do milkshake de liquidificador com calda no salão" loading="lazy" width="360" height="640">
+      </a>
+    </div>
+
+    <div class="actions rv" style="justify-content:center;margin-top:40px">
+      <a class="btn btn-white btn-lg" href="https://www.instagram.com/sampaburgeroficial" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ig"/></svg> Seguir no Instagram</a>
     </div>
   </div>
 </section>
@@ -936,6 +1000,7 @@ button,input{font:inherit;color:inherit}
         <h4>A marca</h4>
         <ul>
           <li><a href="#cozinha">Como a gente faz</a></li>
+          <li><a href="#instagram">No Instagram</a></li>
           <li><a href="#clube">Clube Sampeiro</a></li>
           <li><a href="#franquia">Seja franqueado</a></li>
           <li><a href="#faq">Dúvidas</a></li>
